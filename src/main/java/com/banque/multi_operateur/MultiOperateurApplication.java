@@ -1,13 +1,13 @@
-package com.INF461.Banque;
+package com.banque.multi_operateur;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BanqueApplication {
+public class MultiOperateurApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BanqueApplication.class, args);
+		SpringApplication.run(MultiOperateurApplication.class, args);
 	}
 
 }
