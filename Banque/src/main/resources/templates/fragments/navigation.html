@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<nav th:fragment="sidebar" sec:authorize="isAuthenticated()">
+    <!-- Sidebar pour le dashboard -->
+    <div class="sidebar bg-light border-end" style="min-height: calc(100vh - 80px); width: 250px;">
+        <div class="p-3">
+            <!-- Profil utilisateur -->
+            <div class="text-center mb-4">
+                <div class="avatar-circle mb-3" style="
+                    width: 80px; height: 80px; 
+                    background: linear-gradient(135deg, #20c997, #17a2b8);
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-size: 2rem;">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h6 class="fw-bold mb-1" sec:authentication="name">Utilisateur</h6>
+                <small class="text-muted">
+                    <i class="fas fa-shield-alt me-1"></i>
+                    <span sec:authentication="principal.authorities">Client</span>
+                </small>
+            </div>
+            
+            <!-- Menu de navigation -->
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                    <a class="nav-link d-flex align-items-center" 
+                       th:href="@{/dashboard}">
+                        <i class="fas fa-tachometer-alt me-2"></i>
+                        Tableau de bord
+                    </a>
+                </li>
+                
+                <li class="nav-item mb-2">
+                    <a class="nav-link d-flex align-items-center" 
+                       th:href="@{/comptes}">
+                        <i class="fas fa-wallet me-2"></i>
+                        Mes comptes
+                    </a>
+                </li>
+                
+                <li class="nav-item mb-2">
+                    <a class="nav-link d-flex align-items-center" 
+                       th:href="@{/transactions}">
+                        <i class="fas fa-exchange-alt me-2"></i>
+                        Transactions
+                    </a>
+                </li>
+                
+                <!-- ... reste du menu ... -->
+            </ul>
+        </div>
+    </div>
+</nav>

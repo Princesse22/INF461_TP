@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head th:replace="fragments/header :: head">
+    <title>Banque Multi-Operateurs</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav th:replace="fragments/header :: navbar" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <!-- Remplacé par le fragment -->
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">
+                        <span class="text-primary">BANQUE</span> Multi-Operateurs
+                    </h1>
+                    <p class="lead mb-4">
+                        Solution bancaire unifiée pour les banques traditionnelles et opérateurs mobile money.
+                        Gestion sécurisée de transactions inter-opérateurs avec multiples méthodes d'authentification.
+                    </p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-5">
+                        <a th:href="@{/login}" class="btn btn-primary btn-lg px-4 me-md-2">
+                            <i class="fas fa-sign-in-alt me-2"></i>Se Connecter
+                        </a>
+                        <a th:href="@{/register}" class="btn btn-outline-primary btn-lg px-4">
+                            <i class="fas fa-user-plus me-2"></i>S'inscrire
+                        </a>
+                        <a href="#features" class="btn btn-light btn-lg px-4 ms-2">
+                            <i class="fas fa-info-circle me-2"></i>En savoir plus
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-exchange-alt fa-4x text-primary mb-3"></i>
+                                <h3>Transaction en Direct</h3>
+                            </div>
+                            <!-- Simulation transaction -->
+                            <div class="transaction-preview">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Transfert Inter-Operateur</span>
+                                    <span class="badge bg-success">ACTIF</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <small>De: Orange Money</small>
+                                    <small>À: Bank of Africa</small>
+                                </div>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                                         style="width: 75%"></div>
+                                </div>
+                                <small class="text-muted">Transaction sécurisée avec authentification forte</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h2 class="fw-bold">Fonctionnalités Avancées</h2>
+                    <p class="lead">Architecture basée sur les Design Patterns</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Card 1: Strategy Pattern -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-fingerprint fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title">Authentification Multiple</h4>
+                            <p class="card-text">
+                                <strong>Pattern Strategy</strong><br>
+                                Support de plusieurs méthodes : mot de passe, OTP, empreinte biométrique, reconnaissance faciale.
+                            </p>
+                            <div class="mt-3">
+                                <span class="badge bg-info me-1">Password</span>
+                                <span class="badge bg-info me-1">OTP</span>
+                                <span class="badge bg-info me-1">Biométrie</span>
+                                <span class="badge bg-info">Face ID</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2: Abstract Factory -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-industry fa-3x text-success"></i>
+                            </div>
+                            <h4 class="card-title">Fabrique d'Opérateurs</h4>
+                            <p class="card-text">
+                                <strong>Abstract Factory</strong><br>
+                                Familles d'objets cohérents par opérateur : calculateurs de taux, validateurs, adaptateurs.
+                            </p>
+                            <div class="mt-3">
+                                <span class="badge bg-success me-1">Orange Money</span>
+                                <span class="badge bg-success me-1">MTN Mobile</span>
+                                <span class="badge bg-success">Wave</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3: Builder Pattern -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-cogs fa-3x text-warning"></i>
+                            </div>
+                            <h4 class="card-title">Transactions Flexibles</h4>
+                            <p class="card-text">
+                                <strong>Builder Pattern</strong><br>
+                                Construction étape par étape des transactions complexes avec variantes.
+                            </p>
+                            <div class="mt-3">
+                                <span class="badge bg-warning text-dark me-1">Vérification</span>
+                                <span class="badge bg-warning text-dark me-1">Conversion</span>
+                                <span class="badge bg-warning text-dark">Commission</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operateurs Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Opérateurs Supportés</h2>
+            <div class="row">
+                <div class="col-md-3 col-6 text-center mb-4">
+                    <div class="operateur-card p-3">
+                        <i class="fas fa-university fa-3x text-primary mb-3"></i>
+                        <h5>Banques Traditionnelles</h5>
+                        <small>BOA, ECOBANK, UBA</small>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center mb-4">
+                    <div class="operateur-card p-3">
+                        <i class="fas fa-mobile-alt fa-3x text-orange mb-3"></i>
+                        <h5>Orange Money</h5>
+                        <small>Mobile Money</small>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center mb-4">
+                    <div class="operateur-card p-3">
+                        <i class="fas fa-sim-card fa-3x text-yellow mb-3"></i>
+                        <h5>MTN Mobile Money</h5>
+                        <small>Transferts mobiles</small>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center mb-4">
+                    <div class="operateur-card p-3">
+                        <i class="fas fa-bolt fa-3x text-purple mb-3"></i>
+                        <h5>Wave</h5>
+                        <small>Paiements instantanés</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <h2 class="display-4 fw-bold">10K+</h2>
+                    <p class="lead">Transactions/Jour</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h2 class="display-4 fw-bold">99.9%</h2>
+                    <p class="lead">Disponibilité</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h2 class="display-4 fw-bold">&lt;2s</h2>
+                    <p class="lead">Temps de Traitement</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h2 class="display-4 fw-bold">0</h2>
+                    <p class="lead">Incidents Sécurité</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Prêt à démarrer ?</h2>
+            <p class="lead mb-4">Rejoignez notre plateforme de transactions bancaires sécurisées</p>
+            <a th:href="@{/register}" class="btn btn-primary btn-lg px-5">
+                <i class="fas fa-rocket me-2"></i>Créer un Compte
+            </a>
+            <p class="mt-3 text-muted">
+                <small><i class="fas fa-shield-alt me-1"></i> Sécurité bancaire de niveau militaire</small>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer th:replace="fragments/footer :: footer" class="bg-dark text-white py-4">
+        <!-- Remplacé par le fragment -->
+    </footer>
+
+    <!-- Scripts -->
+    <div th:replace="fragments/footer :: scripts"></div>
+    
+    <!-- Style inline pour démarrer -->
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 0 0 30px 30px;
+        }
+        
+        .hero-section .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(13, 110, 253, 0.1);
+        }
+        
+        .operateur-card {
+            transition: transform 0.3s;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+        }
+        
+        .operateur-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .text-orange { color: #FF6600 !important; }
+        .text-yellow { color: #FFCC00 !important; }
+        .text-purple { color: #9933CC !important; }
+        
+        .transaction-preview {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        body {
+            padding-top: 76px; /* Compensation pour navbar fixe */
+        }
+    </style>
+</body>
+</html>
