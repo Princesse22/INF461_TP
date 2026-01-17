@@ -1,4 +1,4 @@
-package com.INF461.Banque;
+package com.inf461.banque;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.INF461.Banque;
+package com.inf461.banque;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
